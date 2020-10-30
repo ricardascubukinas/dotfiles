@@ -1,0 +1,34 @@
+[
+    {
+        "name": "default",
+        "id": "local",
+        "repository": "/",
+        "storage": "/backup/",
+        "encrypted": true,
+        "no_backup": false,
+        "no_restore": false,
+        "no_save_password": false,
+        "nobackup_file": "",
+        "keys": {
+            "odb_token": "/home/o0d4/.config/onedrive/odb-token.json"
+        },
+        "filters": "",
+        "exclude_by_attribute": false
+    },
+    {
+        "name": "cloud",
+        "id": "online",
+        "repository": "",
+        "storage": "odb://backup/",
+        "encrypted": true,
+        "no_backup": false,
+        "no_restore": false,
+        "no_save_password": false,
+        "nobackup_file": "",
+        "keys": {
+            "odb_token": "/home/o0d4/.config/onedrive/odb-token.json"
+        },
+        "filters": "",
+        "exclude_by_attribute": false
+    }
+]

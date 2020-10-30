@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# +--------+
+# | System |
+# +--------+
+
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+alias suspend='sudo pm-suspend'
+
+alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
+
+# +-----+
+# | X11 |
+# +-----+
+
+alias xpropc='xprop | grep WM_CLASS' # display xprop class
+
+# +----+
+# | ls |
+# +----+
+
+alias ls='ls --color=auto'
+alias lsl='ls -l'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -a'
+alias l='ls -CF'
+
+# +----+
+# | cp |
+# +----+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
+
+# +----+
+# | cd |
+# +----+
+
+alias ..='cd ..'
+
+# +------+
+# | grep |
+# +------+
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# +--------+
+# | Neovim |
+# +--------+
+
+#alias vim='nvim'
+#alias vi='nvim'
+alias svim='sudoedit'
+alias nvimclean='rm -I $HOME/.local/share/nvim/swap/* && rm -I $HOME/.local/share/nvim/undo/*'             # clean nvim swap file
+#alias nvimcleanuundo='rm -I $HOME/.local/share/nvim/undo/*'            # clean the vim undo
+
+# git
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gpo='git push origin'
+alias gtd='git tag --delete'
+alias gtdr='git tag --delete origin'
+alias gr='git branch -r'                                                                           # display remote branch
+alias gplo='git pull origin'
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gl='git log'
+alias gr='git remote'
+alias grs='git remote show'
+alias glo='git log --pretty="oneline"'
+alias glol='git log --graph --oneline --decorate'
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # Delete local branch merged with master
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                              # git log for each branches
+alias gsub="git submodule update --remote"                                                        # pull submodules
+
+alias sudo='sudo -E'

@@ -1,0 +1,71 @@
+#Include important system directories
+
++bin
++boot/*
++etc/*
++lib
++lib64
++opt/*
++root/*
++sbin
++srv/*
++usr/*
+
+# Var folder includes
+
++var/
++var/cache/*
++var/db/*
++var/empty/*
++var/games/*
++var/lib/*
++var/local/*
++var/mail copies a link
++var/named/*
++var/opt/*
++var/lock copies a link
++var/run copies a link
++var/spool/*
++var/.updated
+
+# Don't need logs ant temp files or lock??
+
+-var/tmp/*
+-var/log/*
+
+# Include at-boot populated directories but exclude their contents
+# /dev /proc /sys /tmp /run /mnt /media /lost+found
+
++dev/
+-dev/?*
++proc/
+-proc/?*
++sys/
+-sys/?*
++tmp/
+-tmp/?*
++run/
+-run/?*
++mnt/
+-mnt/?*
++media/
+-media/?*
++lost+found/
+-lost+found/?*
+
+# Don't backup yourself
++backup/
+-backup/?*
+
+# Exclude swap file
+
+-swapfile
+
+# Inlcude important home directory files
+
+# +home/
+# +home/o0d4/
+# +home/o0d4/Documents/*
+
+# Exclude everything else
+-*
