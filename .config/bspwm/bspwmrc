@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 ## Environtment
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
@@ -49,7 +49,7 @@ bspc rule -a firefox desktop='^1' follow=on focus=on
 # 2 > terminal
 bspc rule -a Alacritty desktop='^2' follow=on focus=on
 # 3 > file
-bspc rule -a Pcmanfm  desktop = '^3' follow=on focus=on
+bspc rule -a Pcmanfm  desktop='^3' follow=on focus=on
 bspc rule -a thunar desktop='^3' follow=on focus=on
 bspc rule -a "microsoft teams - preview" desktop='^3' follow=off focus=off
 bspc rule -a "Microsoft Teams - Preview" desktop='^3' follow=off focus=off
@@ -57,6 +57,7 @@ bspc rule -a "Steam" desktop='^3' follow=on focus=on
 bspc rule -a "cantor" desktop='^3' follow=on focus=on
 
 # 4 > office
+bspc rule -a "Bitwarden" desktop='^4' follow=on focus=on
 declare -a office=(Geany Gucharmap Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)

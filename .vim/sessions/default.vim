@@ -2,16 +2,16 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.config/networkmanager-dmenu
+cd ~/
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 nmd.ini
+badd +0 .fehbg
 argglobal
 %argdel
-$argadd nmd.ini
-edit nmd.ini
+$argadd .fehbg
+edit .fehbg
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -28,17 +28,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 18) / 37)
+let s:l = 2 - ((1 * winheight(0) + 40) / 81)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 2
-let s:c = 45 - ((33 * winwidth(0) + 37) / 75)
-if s:c > 0
-  exe 'normal! ' . s:c . '|zs' . 45 . '|'
-else
-  normal! 045|
-endif
+normal! 057|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

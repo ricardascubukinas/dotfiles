@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale --randomize /home/o0d4/.config/bspwm/wallpapers/*
+feh --no-fehbg --bg-scale --randomize /home/o0d4/Pictures/wallpapers/*

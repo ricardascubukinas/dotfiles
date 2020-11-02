@@ -26,31 +26,31 @@ case $chosen in
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        rofi -theme $DIR/rofi/themes/askpass.rasi -e "$_msg"
         fi
         ;;
     $reboot)
-		ans=$($HOME/.config/bspwm/rofi/bin/confirm)
+		ans=$($DIR/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
         systemctl reboot
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        rofi -theme $DIR/rofi/themes/askpass.rasi -e "$_msg"
         fi
         ;;
     $lock)
         betterlockscreen --lock
         ;;
     $suspend)
-		ans=$($HOME/.config/bspwm/rofi/bin/confirm)
+		ans=$($DIR/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
         mpc -q pause
         betterlockscreen --suspend
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        rofi -theme $DIR/rofi/themes/askpass.rasi -e "$_msg"
         fi
         ;;
     $logout)
@@ -60,7 +60,7 @@ case $chosen in
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        rofi -theme $DIR/rofi/themes/askpass.rasi -e "$_msg"
         fi
         ;;
 esac
