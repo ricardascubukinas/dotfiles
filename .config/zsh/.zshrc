@@ -44,13 +44,14 @@ eval "$(dircolors -b $ZDOTDIR/dircolors)"
 fpath=($ZDOTDIR/prompt $fpath)
 autoload -Uz prompt_purification_setup; prompt_purification_setup
 
-#plugins=(git)
+plugins=()
 
 # +---------+
 # | SCRIPTS |
 # +---------+
 
 source $ZDOTDIR/scripts.zsh # Scripts
+eval $(keychain --eval --quiet ~/.ssh/id_rsa)
 
 # +------------+
 # | COMPLETION |
@@ -90,6 +91,8 @@ bindkey -M vicmd v edit-command-line
 # | ALIASES |
 # +---------+
 
+
 source $HOME/.config/aliases/aliases
 
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

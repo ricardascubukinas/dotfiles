@@ -1,0 +1,84 @@
+/**
+ * @name nois
+ * @author spidax
+*/
+@import url("https://ghostbin.co/paste/vp8be.css");
+/**@import url("https://clearvision.gitlab.io/v6/main.css");*/
+@import url("https://gibbu.github.io/BetterDiscord-Themes/AdjustableServerWidth/base.css");
+
+:root {
+  --main-color: #898989;
+  --hover-color: #5e5f60;
+  --success-color: #036739;
+  --danger-color: #600d0d;
+  --url-color: #b7b5b5;
+  --background-image: url("https://clearvision.gitlab.io/images/sapphire.jpg");
+  --background-shading: 30%;
+  --background-position: center;
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-attachment: fixed;
+  --background-brightness: 0%;
+  --background-contrast: 90%;
+  --background-saturation: 100%;
+  --background-grayscale: 0%;
+  --background-invert: 0%;
+  --background-blur: 0px;
+  --background-overlay: rgba(20, 20, 20, 0.06);
+  --user-popout-image: var(--background-image);
+  --user-popout-position: center;
+  --user-popout-size: cover;
+  --user-popout-repeat: no-repeat;
+  --user-popout-attachment: fixed;
+  --user-popout-brightness: 5%;
+  --user-popout-contrast: 100%;
+  --user-popout-saturation: 100%;
+  --user-popout-grayscale: 0%;
+  --user-popout-invert: 0%;
+  --user-popout-blur: 3px;
+  --user-modal-image: var(--background-image);
+  --user-modal-position: center;
+  --user-modal-size: cover;
+  --user-modal-repeat: no-repeat;
+  --user-modal-attachment: fixed;
+  --user-modal-brightness: 5%;
+  --user-modal-contrast: 100%;
+  --user-modal-saturation: 100%;
+  --user-modal-grayscale: 11%;
+  --user-modal-invert: 0%;
+  --user-modal-blur: 3px;
+  --home-icon: url("https://clearvision.gitlab.io/icons/discord.svg");
+  --home-position: center;
+  --home-size: 35px;
+  --channel-unread: #6c8497;
+  --channel-color: rgba(255, 255, 255, 0.3);
+  --muted-color: rgba(123, 78, 78, 1);
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+  --main-font: "Whitney";
+  --code-font: "Consolas";
+  --backdrop-overlay: rgba(41, 41, 41, 0.8);
+  --backdrop-image: var(--background-image);
+  --backdrop-position: var(--background-position);
+  --backdrop-size: var(--background-size);
+  --backdrop-repeat: var(--background-repeat);
+  --backdrop-attachment: var(--background-attachment);
+  --backdrop-brightness: var(--background-brightness);
+  --backdrop-contrast: var(--background-contrast);
+  --backdrop-saturation: var(--background-saturation);
+  --backdrop-invert: var(--background-invert);
+  --backdrop-grayscale: var(--background-grayscale);
+  --backdrop-sepia: var(--background-sepia);
+  --backdrop-blur: var(--background-blur);
+  --bd-blue: var(--main-color);
+  --bd-blue-hover: var(--hover-color);
+  --bd-blue-active: var(--hover-color);
+  --channels-width: 200px;
+  --members-width: 200px;
+  --server-icon-size: 35px;
+  --server-icon-spacing: 5px;
+  --server-container-padding: 5px;
+}

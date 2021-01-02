@@ -20,7 +20,8 @@ getcolors () {
 getcolors
 
 ## Configurations -------------------------------#
-bspc monitor -d '1' '2' '3' '4' '5' '6' '7'
+bspc monitor DP-4 -d '1' '2' '3' '4' '5' '6' '7'
+bspc monitor HDMI-0 -d '8' '9'
 
 bspc config border_width 1
 bspc config window_gap 5
@@ -36,7 +37,15 @@ bspc config gapless_monocle true
 bspc config paddingless_monocle true
 bspc config single_monocle false
 bspc config focus_follows_pointer true
+# mouse action
+#bspc config pointer_modifier mod1
 
+#bspc config pointer_action1 move
+
+
+
+#bspc config pointer_mod         mod4
+#bspc config pointer_action1     move
 
 ## Window rules -------------------------------#
 
@@ -48,6 +57,8 @@ bspc rule -a firefox desktop='^1' follow=on focus=on
 
 # 2 > terminal
 bspc rule -a Alacritty desktop='^2' follow=on focus=on
+bspc rule -a "Emacs" desktop='^2' state=tiled follow=on focus=on
+
 # 3 > file
 bspc rule -a Pcmanfm  desktop='^3' follow=on focus=on
 bspc rule -a thunar desktop='^3' follow=on focus=on
@@ -66,12 +77,17 @@ for i in ${office[@]}; do
 
 # 5 > media
 bspc rule -a "discord" desktop='^5' follow=on focus=on
+
 # 6 > settings
 bspc rule -a GParted desktop='^6' follow=on focus=on
 declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
 System-config-printer.py Pavucontrol Exo-helper-1)
 for i in ${settings[@]}; do
    bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
+
+# 6 > games
+bspc rula -a "Dota 2:dota2" desktop='^7'
+
 
 # special rules
 bspc rule -a termite-float state=floating follow=on focus=on
@@ -104,14 +120,16 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-zsh $HOME/.fehbg
+sh $HOME/.fehbg
 
 # Start mpd
-exec mpd &
+#exec mpd &
 
 # Start bspwm scripts
+multihead
 #bspcolors
 bspcomp
 bspbar
 bspfloat &
-
+pgrep bspswallow || bspswallow &
+wmname LG3D &
