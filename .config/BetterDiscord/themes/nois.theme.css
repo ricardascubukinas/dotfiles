@@ -3,8 +3,8 @@
  * @author spidax
 */
 /*@import url("https://raw.githubusercontent.com/ricardascubukinas/dotfiles/master/.config/BetterDiscord/themes/main.css");*/
-/*@import url("https://clearvision.gitlab.io/v6/main.css");*/
-@import url("https://gitlab.com/spidax/test/-/raw/master/main.css");
+@import url(https://clearvision.gitlab.io/v6/main.css);
+/*@import url("https://gitlab.com/spidax/test/-/raw/008a4fd64ed5c1cb10e2b437ae6514835f045b7e/main.css");*/
 @import url("https://gibbu.github.io/BetterDiscord-Themes/AdjustableServerWidth/base.css");
 
 :root {
@@ -82,4 +82,30 @@
   --server-icon-size: 35px;
   --server-icon-spacing: 5px;
   --server-container-padding: 5px;
+
 }
+.typeWindows-1za-n7 > .wordmark-2iDDfm:before {
+  content: "BRUH";
+  color: rgba(22, 22, 22, 0.7);
+  font-size: 14px;
+  text-shadow: 0 0 3px #000;
+}
+
+.container-3baos1:before {
+  content: "BRUH";
+  right: 50%;
+  text-align: right;
+  transform: translateX(50%);
+}
+
+.container-3baos1:after {
+  content: "v6.9.4.2.0";
+  left: 50%;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(50%) rotateX(90deg);
+}
+
+
+
+
