@@ -101,7 +101,7 @@ element {
 	border:							1px;
     border-radius:                  0px;
     border-color:					@selected;
-    padding:                        15px 15px 15px 15px;
+    padding:                        10px 15px 10px 15px;
 }
 
 element-icon {
@@ -115,7 +115,7 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0;
     padding:                        -10px 0px 0px 0px; 
-    margin:                         2px 0px 20px 2px;
+    margin:                         2px 0px 0px 2px;
 }
 
 element normal.urgent,
