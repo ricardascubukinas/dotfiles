@@ -1,0 +1,26 @@
+[Added Associations]
+image/png=sxiv.desktop;
+image/jpeg=sxiv.desktop;
+text/x-csrc=geany.desktop;
+application/x-shellscript=geany.desktop;
+image/gif=sxiv.desktop;
+image/svg+xml=sxiv.desktop;
+application/x-partial-download=mpv.desktop;
+application/x-cd-image=xarchiver.desktop;pcmanfm.desktop;userapp-7z-PKFMT0.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;atril.desktop;
+text/plain=geany.desktop;nvim.desktop;vim.desktop;userapp-nvim-4H6PV0.desktop;userapp-nvim-MYCRV0.desktop;userapp-alacritty.yml -e nvim-ZV4WV0.desktop;userapp-nvim-2WXWV0.desktop;userapp-nvim-Q6PLV0.desktop;userapp-nvim-3ZRTV0.desktop;userapp-vim-NSCLV0.desktop;
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;
+text/css=visual-studio-code.desktop;
+
+[Default Applications]
+image/gif=sxiv.desktop
+image/svg+xml=sxiv.desktop
+x-scheme-handler/msteams=teams.desktop
+application/x-cd-image=userapp-7z-PKFMT0.desktop
+application/pdf=zathura.desktop
+text/plain=userapp-vim-NSCLV0.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+text/css=visual-studio-code.desktop
+image/jpeg=sxiv.desktop
