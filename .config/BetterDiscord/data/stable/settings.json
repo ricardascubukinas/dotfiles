@@ -12,7 +12,7 @@
         "hideGIFButton": false,
         "voiceMode": false,
         "minimalMode": false,
-        "darkMode": true,
+        "darkMode": false,
         "coloredText": false
     },
     "addons": {

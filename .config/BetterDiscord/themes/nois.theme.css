@@ -2,7 +2,9 @@
  * @name nois
  * @author spidax
 */
-@import url("https://raw.githubusercontent.com/ricardascubukinas/dotfiles/master/.config/BetterDiscord/themes/main.css");
+/*@import url("https://raw.githubusercontent.com/ricardascubukinas/dotfiles/master/.config/BetterDiscord/themes/main.css");*/
+/*@import url("https://clearvision.gitlab.io/v6/main.css");*/
+@import url("https://gitlab.com/spidax/test/-/raw/master/main.css");
 @import url("https://gibbu.github.io/BetterDiscord-Themes/AdjustableServerWidth/base.css");
 
 :root {
@@ -17,8 +19,8 @@
   --background-size: cover;
   --background-repeat: no-repeat;
   --background-attachment: fixed;
-  --background-brightness: 0%;
-  --background-contrast: 90%;
+  --background-brightness: 5%;
+  --background-contrast: 100%;
   --background-saturation: 100%;
   --background-grayscale: 0%;
   --background-invert: 0%;
