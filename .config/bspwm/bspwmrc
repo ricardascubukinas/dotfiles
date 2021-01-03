@@ -90,13 +90,7 @@ bspc rula -a "Dota 2:dota2" desktop='^7'
 
 
 # special rules
-bspc rule -a termite-float state=floating follow=on focus=on
-bspc rule -a Onboard state=floating follow=on focus=on
-bspc rule -a Audacious state=floating follow=on focus=on
 bspc rule -a Firefox:Places state=floating follow=on focus=on
-bspc rule -a Viewnior state=floating follow=on focus=on
-bspc rule -a Conky state=floating manage=off
-bspc rule -a stalonetray state=floating manage=off
 
 ## Autostart -------------------------------#
 
@@ -120,7 +114,7 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-sh $HOME/.fehbg
+sh $HOME/.config/bspwm/bin/.fehbg
 
 # Start mpd
 #exec mpd &
@@ -130,6 +124,6 @@ multihead
 #bspcolors
 bspcomp
 bspbar
-bspfloat &
+#bspfloat &
 pgrep bspswallow || bspswallow &
-wmname LG3D &
+wmname LG3D
