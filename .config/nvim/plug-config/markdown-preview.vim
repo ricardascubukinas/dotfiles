@@ -11,7 +11,7 @@ let g:mkdp_auto_close = 0
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
 " move the cursor
 " default: 0
-let g:mkdp_refresh_slow = 0
+let g:mkdp_refresh_slow = 1
 
 " set to 1, the MarkdownPreview command can be use for all files,
 " by default it can be use in markdown file
@@ -21,7 +21,7 @@ let g:mkdp_command_for_global = 0
 " set to 1, preview server available to others in your network
 " by default, the server listens on localhost (127.0.0.1)
 " default: 0
-let g:mkdp_open_to_the_world = 1
+let g:mkdp_open_to_the_world = 0
 
 " use custom IP to open preview page
 " useful when you work in remote vim and preview on local browser
