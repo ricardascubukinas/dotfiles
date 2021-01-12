@@ -1,0 +1,9 @@
+#/bin/zsh
+# Change wallpaper
+if [ -z "$1" ]; then
+  export WALLPAPERS=/home/o0d4/Pictures/wallpapers
+  PAPER=$(find "$WALLPAPERS" -xtype f | sort -R | head -1)
+else
+  PAPER="$1"
+fi
+xwallpaper --zoom "$PAPER"
