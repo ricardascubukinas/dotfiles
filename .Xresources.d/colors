@@ -4,11 +4,11 @@
 ! License:    MIT
 ! ------------------------------------------------------------------------------
 
-*background: #1d1f21
+*background: #1d1d1d
 *foreground: #c5c8c6
 *cursorColor: #D8DEE9
 
-*color0:  #1d1f21
+*color0:  #1d1d1d
 *color1:  #CC342B
 *color2:  #198844
 *color3:  #FBA922

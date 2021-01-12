@@ -89,6 +89,7 @@ bspc rula -a "Dota 2:dota2" desktop='^7'
 
 # special rules
 bspc rule -a Firefox:Places state=floating follow=on focus=on
+bspc rule -a "Zathura" state=tiled focus=on follow=on
 
 ## Autostart -------------------------------#
 
