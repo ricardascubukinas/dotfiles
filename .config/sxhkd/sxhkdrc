@@ -18,8 +18,8 @@ super + n
 super + {w,x,r}
 	sh ~/.config/rofi/bin/{windows,powermenu,asroot}
 
-ctrl + alt + {s,n}
-	sh ~/.config/rofi/bin/{screenshot,network}
+ctrl + alt + s
+	noswallow_open ~/.config/rofi/bin/screenshot
 
 ##---------- Applications ----------##
 
@@ -31,11 +31,11 @@ super + shift + {f,w,e}
 
 # Take a screenshot
 Print
-	scrot 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+	scrot 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; noswallow_open "sxiv $$(xdg-user-dir PICTURES)/$f"'
 	
 # Take a screenshot in 5 second
 alt + Print	
-	scrot -d 5 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+	scrot -d 5 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; noswallow_open "sxiv $$(xdg-user-dir PICTURES)/$f"'
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
