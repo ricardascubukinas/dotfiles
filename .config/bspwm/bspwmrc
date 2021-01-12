@@ -21,8 +21,6 @@ getcolors
 
 ## Configurations -------------------------------#
 multihead &
-bspc monitor DP-4 -d '1' '2' '3' '4' '5' '6' '7'
-bspc monitor HDMI-0 -d '8' '9'
 
 bspc config border_width 1
 bspc config window_gap 5
@@ -66,7 +64,6 @@ bspc rule -a thunar desktop='^3' follow=on focus=on
 bspc rule -a "microsoft teams - preview" desktop='^3' follow=off focus=off
 bspc rule -a "Microsoft Teams - Preview" desktop='^3' follow=off focus=off
 bspc rule -a "Steam" desktop='^3' follow=on focus=on
-bspc rule -a "cantor" desktop='^3' follow=on focus=on
 
 # 4 > office
 bspc rule -a "Bitwarden" desktop='^4' follow=on focus=on
@@ -111,18 +108,14 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # Fix cursor
 xsetroot -cursor_name left_ptr
 
-# Restore wallpaper
-sh $HOME/.config/bspwm/bin/.fehbg
-
-# Start mpd
-#exec mpd &
+# Set wallpaper
+setwallpaper
 
 # Start bspwm scripts
 multihead &
-#bspcolors
 bspcomp &
 bspbar &
-#bspfloat &
+bspshift &
 pgrep bspswallow || bspswallow &
 wmname LG3D &
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"

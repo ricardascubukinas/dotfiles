@@ -40,13 +40,12 @@ case $chosen in
         fi
         ;;
     $lock)
-        betterlockscreen --lock
+        slock
         ;;
     $suspend)
 		ans=$($DIR/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-        mpc -q pause
-        betterlockscreen --suspend
+        systemctl suspend
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else
