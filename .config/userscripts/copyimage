@@ -1,0 +1,11 @@
+#!/bin/sh
+type=$(file -b --mime-type "$1")
+
+if [ $type = "image/jpeg" ]; then
+  mogrify -format png "$1"
+  filename=${1%.*}
+  xclip -selection clipboard -t image/png "$filename".png
+  rm "$filename".png
+else
+  xclip -selection clipboard -t image/png "$1"
+fi

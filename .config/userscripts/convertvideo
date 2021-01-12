@@ -1,0 +1,21 @@
+#!/bin/sh
+i=0
+j=$((i / 10))
+k=$((i / 100))
+l=0
+
+DIR='/home/o0d4/Downloads/HxH/'
+for FILE in ls "$DIR"*.mkv
+do
+  echo "NOW CONVERTING\n\n\t"
+  echo $FILE
+  echo "\n"
+  ffmpeg -y -i "$FILE" -map 0:s:0 subs-$k$j$i.ass
+  ffmpeg -n -hwaccel cuda -hwaccel_output_format cuda -i "$FILE" -c:v h264_nvenc -rc vbr_hq -b:v 7M -maxrate:v 9M -bufsize:v 14M -vf "format=yuv420p, ass=subs-$k$j$i.ass" -preset slow -c:a aac -map 0:v:0 -map 0:a:0 -map_metadata -1 -map -0:s /home/o0d4/Downloads/HxHd/HxH-$k$j$i.mkv
+  rm -rf subs-$k$j$i.ass
+  l=$((l+1))
+  i=$((i+1))
+  i=$((i % 10))
+  j=$((l % 100 / 10))
+  k=$((l / 100))
+done

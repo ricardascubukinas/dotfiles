@@ -1,0 +1,21 @@
+#!/bin/sh
+#type = $(file -b --mime-type "$file") && xclip -selection clipboard -t "$type" "$file" && notify-send "$file copied to clipboard" & ;;
+while read file
+do
+        case "$1" in
+        "w") 
+            setwallpaper "$file" & ;;
+        "c")
+            copyimage "$file" && notify-send "$file copied to clipboard." ;;
+	      "r")
+		        convert -rotate 90 "$file" "$file" ;;
+	      "R")
+		        convert -rotate -90 "$file" "$file" ;;
+	      "f")
+		        convert -flop "$file" "$file" ;;
+	      "d")
+            [ "$(/home/o0d4/.config/rofi/bin/confirm)" = "y" ] && rm "$file" && notify-send "$file deleted." ;;
+	      "g")	
+            setsid -f gimp "$file" ;;
+        esac
+done
