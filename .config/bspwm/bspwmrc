@@ -118,5 +118,5 @@ bspcomp &
 bspbar &
 bspshift &
 pgrep bspswallow || bspswallow &
-wmname LG3D &
+#wmname LG3D &
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
