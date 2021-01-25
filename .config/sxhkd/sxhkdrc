@@ -39,7 +39,9 @@ alt + Print
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	volume{-up,-down}
+  volume{-up,-down}
+
+#pactl set-sink-volume 1 {+,-}5%
 
 XF86AudioMute
 	amixer set Master toggle

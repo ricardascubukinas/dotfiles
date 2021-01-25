@@ -89,12 +89,12 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: Terminus
+    family: RobotoMono Nerd Font
     style: Medium
   # Bold font face
   bold:
-    family: Terminus
-    style: Medium
+    family: RobotoMono Nerd Font
+    style: Bold
 
   # Italic font face
   #italic:

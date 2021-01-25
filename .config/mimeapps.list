@@ -1,6 +1,6 @@
 [Added Associations]
 image/png=sxiv.desktop;
-image/jpeg=sxiv.desktop;
+image/jpeg=gimp.desktop;sxiv.desktop;
 text/x-csrc=geany.desktop;
 application/x-shellscript=geany.desktop;
 image/gif=sxiv.desktop;
