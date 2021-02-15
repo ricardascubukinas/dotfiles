@@ -82,3 +82,6 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 alias gsub="git submodule update --remote"                                                        # pull submodules
 
 #alias sudo='sudo -E'
+
+alias sshmif="ssh -i .ssh/id_rsa.pub -L 5555:linux:3389 ricu6580@uosis.mif.vu.lt"
+alias sshvps="ssh o0d4@141.136.44.68 -p 4965"

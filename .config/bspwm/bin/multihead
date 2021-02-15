@@ -6,8 +6,9 @@
 xrandr -s 0
 external_monitor=$(xrandr --query | rg 'HDMI-0')
 if [[ $external_monitor = *connected* ]]; then
-    xrandr --output DP-4 --primary --mode 1920x1080 --rate 74.99 --rotate normal --output HDMI-0 --mode 1360x768 --rotate normal --right-of DP-4
-    bspc monitor HDMI-0 -d '8' '9'
+    xrandr --fb 1920x1080 --output DP-4 --primary --rate 74.99 --mode 1920x1080  --rotate normal --output HDMI-0 --mode 1360x768 --scale-from 1920x1080 --same-as DP-4
+    #xrandr --output DP-4 --primary --mode 1920x1080 --rate 74.99 --rotate normal --output HDMI-0 --mode 1360x768 --rotate normal --same-as DP-4
+    bspc monitor HDMI-0 -d '6' '7'
 else
     #xrandr -s 0
     xrandr --output DP-4 --primary --mode 1920x1080 --rate 74.99 --rotate normal

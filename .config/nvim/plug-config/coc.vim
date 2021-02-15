@@ -7,6 +7,11 @@ let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-json',
   \ 'coc-yank',
+  \ 'coc-yaml',
+  \ 'coc-xml',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-python',
   \ ]
 
   "   \ 'coc-vimlsp',

@@ -1,7 +1,7 @@
 [Added Associations]
 image/png=sxiv.desktop;
 image/jpeg=gimp.desktop;sxiv.desktop;
-text/x-csrc=geany.desktop;
+text/x-csrc=geany.desktop;VSCodium.desktop;
 application/x-shellscript=geany.desktop;
 image/gif=sxiv.desktop;
 image/svg+xml=sxiv.desktop;
@@ -25,3 +25,5 @@ video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
 text/css=visual-studio-code.desktop
 image/jpeg=sxiv.desktop
+x-scheme-handler/discord-709793491911180378=discord-709793491911180378.desktop
+text/x-csrc=VSCodium.desktop

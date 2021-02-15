@@ -9,6 +9,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+export PARU_CONF=$XDG_CONFIG_HOME/paru/paru.conf
 
 # zsh
 

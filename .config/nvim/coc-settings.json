@@ -20,6 +20,7 @@
   "list.selectedSignText": " ",
   // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
+    "xtx",
     "css",
     "tex",
     "markdown",
