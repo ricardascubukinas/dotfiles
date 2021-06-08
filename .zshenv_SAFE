@@ -21,5 +21,5 @@ export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
 
 # backup variables
-export DUPLICACY_PASSWORD=tno67pSnnMm6y8c5ohs82AAqT6F5MyHmm2qaShbtWmU9446UJW
-export DUPLICACY_CLOUD_PASSWORD=tno67pSnnMm6y8c5ohs82AAqT6F5MyHmm2qaShbtWmU9446UJW
+export DUPLICACY_PASSWORD=REPLACE WITH PASSWORD FROM PASSWORD MANAGER 'BACKUP'
+export DUPLICACY_CLOUD_PASSWORD=REPLACE WITH PASSWORD FROM PASSWORD MANAGER 'BACKUP'
