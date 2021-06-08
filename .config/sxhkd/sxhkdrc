@@ -48,13 +48,16 @@ XF86AudioMute
 	
 # Music control
 XF86Calculator
-	playerctl --player=spotify play-pause
+  mpc toggle
+	#playerctl --player=spotify play-pause
 
 super + XF86Calculator
-	playerctl --player=spotify previous
+  mpc prev
+	#playerctl --player=spotify previous
 
 super + XF86AudioMute
-	playerctl --player=spotify next
+  mpc next
+	#playerctl --player=spotify next
 
 super + XF86AudioLowerVolume
 	playerctl --player=spotify volume 0.05 -
@@ -132,13 +135,13 @@ super + {_,shift + } + 0
 	bspc {desktop -f,node -d} 0
 
 # Expanding windows
-super + alt + {Left,Right,Up,Down}
-	bspc node -z {left -10 0,right 10 0,top 0 -10,bottom 0 10}
-
-## Shrinking windows
-super + alt + shift {Left,Right,Up,Down}
-	bspc node -z {left 10 0,right -10 0,top 0 10,bottom 0 -10}
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
 	
+## Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
 ## Move floating windows
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}

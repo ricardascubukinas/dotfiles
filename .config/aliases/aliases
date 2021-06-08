@@ -60,7 +60,6 @@ alias nvimclean='rm -I $HOME/.local/share/nvim/swap/* && rm -I $HOME/.local/shar
 #alias nvimcleanuundo='rm -I $HOME/.local/share/nvim/undo/*'            # clean the vim undo
 
 # git
-alias gs='git status'
 alias ga='git add'
 alias gp='git push'
 alias gpo='git push origin'

@@ -1,0 +1,17 @@
+#!/bin/sh
+i=0
+j=$((i / 10))
+l=0
+
+DIR='/home/o0d4/Downloads/Shameless S09 (2018) WEB-DL 720p/'
+for FILE in ls "$DIR"*.mkv
+do
+  echo "NOW CONVERTING\n\n\t"
+  echo $FILE
+  echo "\n"
+  ffmpeg -hwaccel_output_format cuda -i "$FILE" -c:v copy -c:a aac -map 0 "/home/o0d4/Downloads/Shameless S09 (2018) WEB-DL 720p/Shameless-$j$i.mkv"
+  l=$((l+1))
+  i=$((i+1))
+  i=$((i % 10))
+  j=$((l % 100 / 10))
+done

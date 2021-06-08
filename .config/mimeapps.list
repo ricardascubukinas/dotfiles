@@ -12,6 +12,7 @@ text/plain=geany.desktop;nvim.desktop;vim.desktop;userapp-nvim-4H6PV0.desktop;us
 video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;
 text/css=visual-studio-code.desktop;
+text/x-tex=VSCodium.desktop;
 
 [Default Applications]
 inode/directory=pcmanfm.desktop
@@ -27,3 +28,7 @@ text/css=visual-studio-code.desktop
 image/jpeg=sxiv.desktop
 x-scheme-handler/discord-709793491911180378=discord-709793491911180378.desktop
 text/x-csrc=VSCodium.desktop
+x-scheme-handler/ror2mm=r2modman.desktop
+text/x-tex=VSCodium.desktop
+x-scheme-handler/discord-523502837364424706=discord-523502837364424706.desktop
+x-scheme-handler/nxm=modorganizer2-nxm-handler.desktop

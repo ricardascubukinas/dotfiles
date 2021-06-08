@@ -61,7 +61,7 @@ bspc rule -a Alacritty desktop='^2' follow=on focus=on
 bspc rule -a Pcmanfm  desktop='^3' follow=on focus=on
 bspc rule -a "microsoft teams - preview" desktop='^3' follow=off focus=off
 bspc rule -a "Microsoft Teams - Preview" desktop='^3' follow=off focus=off
-bspc rule -a "Steam" desktop='^6' follow=on focus=on
+bspc rule -a "Steam" desktop='^6' follow=off focus=off
 
 # 4 > office
 bspc rule -a "Bitwarden" desktop='^0' follow=on focus=on
@@ -115,6 +115,7 @@ multihead &
 bspcomp &
 bspbar &
 bspshift &
+mopidy &
 #pgrep bspswallow || bspswallow &
 #wmname LG3D &
-exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
+#exec "systemctl --user import-environment; systemctl --user start graphical-session.target"

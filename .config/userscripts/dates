@@ -1,0 +1,31 @@
+#!/bin/sh
+rm -rf dates_old.txt sheet.csv links.txt
+if [ -f dates.txt ]
+then
+  mv dates.txt dates_old.txt
+fi
+echo "Getting sheet information"
+wget -q -O sheet.csv 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQL_9gl8Gy93NYH7CfvIJlBcRnc3STeMwVn9BE1CdmYW6l4LHF08fKkiU1-BIGNSpHQGFKGrF23adXA/pub?gid=0&single=true&output=csv'
+
+awk -F "\"*,\"*" '{print $2}' sheet.csv | rg http > links.txt
+n=$(wc -l < links.txt)
+i=1
+echo "Downloading and parsing pages."
+bat -p links.txt | while read line
+do
+  echo -n "($i/$n)" 
+  page=$(curl -Ls "$line")
+  tempdate=$(echo "$page" | rg -A 3 'Updated' | rg -o '>.*</t' | rg 20 | rg -o '>.*<' | tr -d '><')
+  if [ -z "$tempdate" ]
+  then
+    tempdate=$(echo "$page" | rg -A 3 'Added' | rg -o '>.*</t' | rg 20 | rg -o '>.*<' | tr -d '><')
+  fi
+  echo "$tempdate" >> dates.txt
+  ((i++))
+  echo -n $'\r'
+done
+echo "Differences between last update:"
+diff dates_old.txt dates.txt
+bat -p dates.txt | xsel -ib
+echo "Done, copied dates to clipboard"
+rm -rf sheet.csv links.txt
