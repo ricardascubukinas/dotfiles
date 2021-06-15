@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+timestamp=$(date '+%Y-%m-%d-%H-%M-%S')
+
+file="ss_$timestamp.png"
+
+
+sel=$(slop -f "-i %i -g %g")
+shotgun $sel "$file"
+
+mv $file "$(xdg-user-dir PICTURES)/screenshots"
+
+noswallow_open "sxiv '$(xdg-user-dir PICTURES)'/screenshots/'$file'"

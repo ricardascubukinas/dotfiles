@@ -84,3 +84,5 @@ alias gsub="git submodule update --remote"                                      
 
 alias sshmif="ssh -i .ssh/id_rsa.pub -L 5555:linux:3389 ricu6580@uosis.mif.vu.lt"
 alias sshvps="ssh o0d4@141.136.44.68 -p 4965"
+
+alias remote_work="xfreerdp +clipboard /u:'rcubukinas@alnasoft.lt' /p:'163758Vero!s' /dynamic-resolution /audio-mode:0 /mic:sys:pulse,format:1 /v:192.168.0.101"
