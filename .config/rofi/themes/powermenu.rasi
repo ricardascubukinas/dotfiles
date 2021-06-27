@@ -22,6 +22,7 @@ window {
     border-radius:                  0px;
     border-color:					@selected;
     width:                          281px;
+    --height:                         100px;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
@@ -101,12 +102,12 @@ element {
 	border:							1px;
     border-radius:                  0px;
     border-color:					@selected;
-    padding:                        10px 15px 10px 15px;
+    padding:                        10px 15px 30px 15px;
 }
 
 element-icon {
     size:                           24px;
-    border:                         0px;
+    border:                         1px;
 }
 
 element-text {

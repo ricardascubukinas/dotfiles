@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function move_mouse()
+{
+    RANDOM=$$
+    minX=1920
+    maxX=3840
+    minY=0
+    maxY=1080
+    X=$(expr $minX + $RANDOM % $maxX)
+    Y=$(expr $minY + $RANDOM % $maxY)
+    
+    xdotool mousemove "$X" "$Y"
+}
+
+while :; do
+    if  [ $(xprintidle) -gt 10 ]
+    then
+      move_mouse
+    fi
+      sleep 5
+done
+

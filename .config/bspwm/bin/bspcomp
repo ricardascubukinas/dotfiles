@@ -8,3 +8,5 @@ while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 
 # Launch compton
 picom --experimental-backends --config ~/.config/picom.conf &
+#--experimental-backends
+

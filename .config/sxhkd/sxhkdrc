@@ -44,7 +44,8 @@ XF86Audio{RaiseVolume,LowerVolume}
 #pactl set-sink-volume 1 {+,-}5%
 
 XF86AudioMute
-	amixer set Master toggle
+  pulsemixer --toggle-mute
+	#amixer set Master toggle
 	
 # Music control
 XF86Calculator
